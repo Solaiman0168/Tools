@@ -1,0 +1,33 @@
+
+.shown {
+    position: absolute;
+}
+.shown .hover-shown {
+    display:none;
+    position: absolute;
+}
+.shown .conrtentHover .hover-shown{
+    display:block;
+}
+
+.hover-shown .btn-success {
+    margin-top: -5px;
+}
+
+.hover-shown .pen-edit-btn {
+    padding: 15px;
+    margin-top: -1px;
+}
+
+.hover-shown .submit-btn {
+    padding: 4px 10px !important;
+    margin-top: 5px !important;
+}
+
+input[type=text] {
+    display: block;
+}
+
+table tbody tr td {
+    padding: 40px;
+}

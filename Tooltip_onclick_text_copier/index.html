@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <style>
+            .container{
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background: #e9faff;
+            }
+        </style>
+    </head>
+<body>
+
+<div class="container">
+    <div class="copy_text">
+        <span data-clipboard-text="Click me">Click me</span>
+    </div> 
+</div>
+ 
+
+<script>
+
+// Tooltip
+
+$('span').tooltip({
+  trigger: 'click',
+  placement: 'bottom'
+});
+
+function setTooltip(message) {
+  $('span').tooltip('hide')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+
+function hideTooltip() {
+  setTimeout(function() {
+    $('span').tooltip('hide');
+  }, 1000);
+}
+
+// Clipboard
+
+var clipboard = new Clipboard('span');
+
+clipboard.on('success', function(e) {
+  setTooltip('Copied!');
+  hideTooltip();
+});
+
+clipboard.on('error', function(e) {
+  setTooltip('Failed!');
+  hideTooltip();
+});
+
+</script>
+
+</body>
+</html>

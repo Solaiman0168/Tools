@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price edit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        .submenu {
+            position: absolute;
+        }
+        .submenu .subOptions {
+            display:none;
+            position: absolute;
+        }
+        .submenu .submenuHover .subOptions{
+            display:block;
+        }
+
+    </style>
+
+</head>
+<body>
+    <ul class=" submenu">
+        <span><a>Button1</a>
+          <div class="subOptions">
+                  Button 1 Content
+          </div>
+        </span>
+        <span><a>Button2</a>
+          <div class="subOptions">
+                  Button 2 Content
+          </div>
+        </span>
+        <span><a>Button3</a>
+          <div class="subOptions">
+                  Button 3 Content
+          </div>
+        </span>									
+        <span><a>Button4</a>
+          <div class="subOptions">	
+                  Button 4 Content
+          </div>
+        </span>
+      <ul>
+
+        <script>
+            (function($) {
+
+            var activeSubmenuIndex;
+            $('.submenu span').on('mouseenter',
+                function () {
+                    //return if it's the same button being hovered
+                    if ($(this).index() === activeSubmenuIndex) {
+                        return;
+                    }
+                    //remove classes from other buttons, put on new active one
+                    $('.submenu span').removeClass('submenuHover');
+                    //add class for li element
+                    $(this).addClass('submenuHover');
+                });
+            })(jQuery);
+        </script>
+</body>
+</html>
