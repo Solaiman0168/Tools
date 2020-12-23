@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+   
+.variation_load {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.variation_load_tr{
+    position: relative;
+}
+
+.variation_load{
+    position: absolute;
+}
+
+.spin_loading {
+    display: flex;
+}
+.spin_loading .dot {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    margin: 0.8em;
+    border-radius: 50%;
+}
+.spin_loading .dot::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    animation: wave 2s ease-out infinite;
+}
+.spin_loading .dot:nth-child(1) {
+    background: #7ef9ff;
+}
+.spin_loading .dot:nth-child(1)::before {
+    animation-delay: 0.2s;
+}
+.spin_loading .dot:nth-child(2) {
+    background: #89cff0;
+}
+.spin_loading .dot:nth-child(2)::before {
+    animation-delay: 0.4s;
+}
+.spin_loading .dot:nth-child(3) {
+    background: #4682b4;
+}
+.spin_loading .dot:nth-child(3)::before {
+    animation-delay: 0.6s;
+}
+.spin_loading .dot:nth-child(4) {
+    background: #0f52ba;
+}
+.spin_loading .dot:nth-child(4)::before {
+    animation-delay: 0.8s;
+}
+.spin_loading .dot:nth-child(5) {
+    background: #000080;
+}
+.spin_loading .dot:nth-child(5)::before {
+    animation-delay: 1s;
+}
+
+@keyframes wave {
+    50%, 75% {
+        transform: scale(2.5);
+    }
+    80%, 100% {
+        opacity: 0;
+    }
+}
+table{
+    width: 100%;
+}
+table thead tr th {
+    padding: 10px;
+    text-align: center;
+}
+table tbody tr td {
+    padding: 50px;
+    text-align: center;
+}
+table thead th {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+} 
+
+table tbody tr td{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+
+    <div style="margin-top: 40px;">
+        <table style="border-collapse:collapse;">
+            <thead>
+                <th>Id</th>
+                <th>Catalogue ID</th>
+                <th>Product Name</th>
+                <th>Catagory</th>
+                <th>Account</th>
+            </thead>
+            <tbody>
+                  <tr class="variation_load_tr" style="cursor: pointer;">
+                    
+                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">
+                        <div id="product_variation_loading0" class="variation_load" style="display: none;">
+                            <div class="spin_loading">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                        15424181
+                    </td>
+                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">13463</td>
+                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens Parka</td>
+                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
+                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Topbrand</td>
+                  </tr>
+        
+                  <!--hidden row -->
+                  <tr>
+                    <td colspan="13" class="hiddenRow" style="padding: 0; background-color: #ccc">
+                        <div class="accordian-body collapse" id="demo1">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SKU</th>
+                                        <th>start Price</th>
+                                        <th>Quantity</th>
+                                    </tr> 
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>B7-1306</td>
+                                        <td>20.99</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>B7-1307</td>
+                                        <td>20.99</td>
+                                        <td>5</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                        </div> 
+                    </td>
+                  </tr>
+                  <!--end hidden row -->
+        
+                  <tr>
+                    
+                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">
+                        <div id="product_variation_loading1" class="variation_load" style="display: none;">
+                            <div class="spin_loading">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                        15424182
+                    </td>
+                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">13464</td>
+                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens </td>
+                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
+                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Topbrand</td>
+                  </tr>
+        
+                  <!--hidden row -->
+                  <tr>
+                    <td colspan="13" class="hiddenRow" style="padding: 0; background-color: #ccc">
+                        <div class="accordian-body collapse" id="demo2">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>SKU</th>
+                                        <th>start Price</th>
+                                        <th>Quantity</th>
+                                    </tr> 
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>B7-1308</td>
+                                        <td>129.99</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>B7-1309</td>
+                                        <td>129.99</td>
+                                        <td>2</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                        </div> 
+                    </td>
+                  </tr>
+                  <!--end hidden row -->
+        
+            </tbody>
+          </table>
+        </div>
+    
+
+
+<script>
+
+    $('.accordian-body').on('show.bs.collapse', function () {
+        $(this).closest("table")
+            .find(".collapse.in")
+            .not(this)
+            .collapse('toggle')
+        })
+
+
+        function getVariation(obj,id){
+        $('.variation_load').hide();
+        $.ajax({
+            type: "post",
+            url: "{{url('get-ebay-variation')}}",
+            data: {
+                "_token" : "{{csrf_token()}}",
+            },
+            beforeSend: function () {
+                $('#product_variation_loading'+id).show();
+            },
+
+            complete: function () {
+                $('#product_variation_loading'+id).hide();
+            }
+        })
+    }
+
+</script>
+
+</body>
+</html>

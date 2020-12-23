@@ -6,7 +6,7 @@
                 justify-content: center;
                 height: 100vh;
             }
-            .copybutton{
+            .copy_button{
                 background-color:#fff;
                 border:0;
                 outline:0;
@@ -28,16 +28,27 @@
                 display: none;
                 margin-left: 40px;
                 padding: 5px 12px;
+                position: absolute;
                 background-color: #000000df;
                 border-radius: 4px;
                 color: #fff;
             }
-            table tbody tr td{
+            table tbody tr td {
                 padding: 20px 80px;
             }
+            .search_sec {
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                padding: 30px 0;
+             }
         </style>
     </head>
     <body>
+
+        <div class="search_sec">
+            <input type="text" name="search">
+        </div>
 
         <div class="container">
             <table>
@@ -50,7 +61,7 @@
                     <tr>
                         <td>
                             <div class="button-tooltip-container">
-                                <span title="Copy This ID" onclick="textCopied(this);" class="copybutton">94426</span>
+                                <span title="Copy This ID" onclick="textCopied(this);" class="copy_button">94426</span>
                                 <span class="custom-tooltip" id="custom-tooltip">copied!</span>
                             </div>
                         </td>
@@ -58,7 +69,7 @@
                     <tr>
                         <td>
                             <div class="button-tooltip-container">
-                                <span title="Copy This ID" onclick="textCopied(this);" class="copybutton">94425</span>
+                                <span title="Copy This ID" onclick="textCopied(this);" class="copy_button">94425</span>
                                 <span class="custom-tooltip" id="custom-tooltip">copied!</span>
                             </div>
                         </td>
@@ -66,7 +77,7 @@
                     <tr>
                         <td>
                             <div class="button-tooltip-container">
-                                <span title="Copy This ID" onclick="textCopied(this);" class="copybutton">94424</span>
+                                <span title="Copy This ID" onclick="textCopied(this);" class="copy_button">94424</span>
                                 <span class="custom-tooltip" id="custom-tooltip">copied!</span>
                             </div>
                         </td>
@@ -122,7 +133,7 @@
         // for Multiple data ID
 
         function textCopied(el){
-        var inp =document.createElement('input');
+        var inp = document.createElement('input');
         document.body.appendChild(inp);
         inp.value = el.textContent;
         inp.select();
