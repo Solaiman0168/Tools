@@ -110,19 +110,119 @@ table tbody tr td{
 </head>
 <body>
 
+
+
+<!---------------------------ON OFF SWITCH BUTTON AREA------------------------>
+<!--------------------------------------------------------------------------->
+
+<div class="row content-inner mt-2 mb-2">
+    <div class="col-md-4">
+        <div class="d-flex align-items-center">
+            <div class="onoffswitch">
+                <input type="checkbox" name="id" class="onoffswitch-checkbox" id="id" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="id">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>ID</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+            <div class="onoffswitch">
+                <input type="checkbox" name="catalogue_id" class="onoffswitch-checkbox" id="catalogue_id" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="catalogue_id">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Catalogue ID</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2 mt-xs-10">
+            <div class="onoffswitch">
+                <input type="checkbox" name="Product_name" class="onoffswitch-checkbox" id="Product_name" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="Product_name">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Product Name</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+            <div class="onoffswitch">
+                <input type="checkbox" name="category" class="onoffswitch-checkbox" id="category" tabindex="0" checked >
+                <label class="onoffswitch-label" for="category">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Category</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+            <div class="onoffswitch">
+                <input type="checkbox" name="account" class="onoffswitch-checkbox" id="account" tabindex="0" checked >
+                <label class="onoffswitch-label" for="account">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Account</p></div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="d-flex align-items-center">
+            <div class="onoffswitch">
+                <input type="checkbox" name="sku" class="onoffswitch-checkbox" id="sku" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="sku">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>SKU</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+            <div class="onoffswitch">
+                <input type="checkbox" name="start_price" class="onoffswitch-checkbox" id="start_price" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="start_price">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Start Price</p></div>
+        </div>
+        <div class="d-flex align-items-center mt-2">
+            <div class="onoffswitch">
+                <input type="checkbox" name="quantity" class="onoffswitch-checkbox" id="quantity" tabindex="0"  checked >
+                <label class="onoffswitch-label" for="quantity">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+            <div class="ml-1"><p>Quantity</p></div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<!---------------------------END ON OFF SWITCH BUTTON AREA------------------------>
+<!--------------------------------------------------------------------------->
+
+
     <div style="margin-top: 40px;">
         <table style="border-collapse:collapse;">
             <thead>
-                <th>Id</th>
-                <th>Catalogue ID</th>
-                <th>Product Name</th>
-                <th>Catagory</th>
-                <th>Account</th>
+                <th class="id">Id</th>
+                <th class="catalogue_id">Catalogue ID</th>
+                <th class="Product_name">Product Name</th>
+                <th class="category">Catagory</th>
+                <th class="account">Account</th>
             </thead>
             <tbody>
                   <tr class="variation_load_tr" style="cursor: pointer;">
                     
-                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">
+                    <td class="id" data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">
                         <div id="product_variation_loading0" class="variation_load" style="display: none;">
                             <div class="spin_loading">
                                 <div class="dot"></div>
@@ -134,10 +234,10 @@ table tbody tr td{
                         </div>
                         15424181
                     </td>
-                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">13463</td>
-                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens Parka</td>
-                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
-                    <td data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Topbrand</td>
+                    <td class="catalogue_id" data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">13463</td>
+                    <td class="Product_name" data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens Parka</td>
+                    <td class="category" data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
+                    <td class="account" data-toggle="collapse" onclick="getVariation(this,0)" data-target="#demo1" class="accordion-toggle">Topbrand</td>
                   </tr>
         
                   <!--hidden row -->
@@ -147,21 +247,21 @@ table tbody tr td{
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>SKU</th>
-                                        <th>start Price</th>
-                                        <th>Quantity</th>
+                                        <th class="sku">SKU</th>
+                                        <th class="start_price">start Price</th>
+                                        <th class="quantity">Quantity</th>
                                     </tr> 
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>B7-1306</td>
-                                        <td>20.99</td>
-                                        <td>3</td>
+                                        <td class="sku">B7-1306</td>
+                                        <td class="start_price">20.99</td>
+                                        <td class="quantity">3</td>
                                       </tr>
                                       <tr>
-                                        <td>B7-1307</td>
-                                        <td>20.99</td>
-                                        <td>5</td>
+                                        <td class="sku">B7-1307</td>
+                                        <td class="start_price">20.99</td>
+                                        <td class="quantity">5</td>
                                       </tr>
                                 </tbody>
                               </table>
@@ -172,7 +272,7 @@ table tbody tr td{
         
                   <tr>
                     
-                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">
+                    <td class="id" data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">
                         <div id="product_variation_loading1" class="variation_load" style="display: none;">
                             <div class="spin_loading">
                                 <div class="dot"></div>
@@ -184,10 +284,10 @@ table tbody tr td{
                         </div>
                         15424182
                     </td>
-                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">13464</td>
-                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens </td>
-                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
-                    <td data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Topbrand</td>
+                    <td class="catalogue_id" data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">13464</td>
+                    <td class="Product_name" data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">DIESEL BLACK GOLD JIPLAID Mens </td>
+                    <td class="category" data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Clothing, Shoes & Accessories>Men>Men's</td>
+                    <td class="account" data-toggle="collapse"  style="cursor: pointer;" onclick="getVariation(this,1)" data-target="#demo2" class="accordion-toggle">Topbrand</td>
                   </tr>
         
                   <!--hidden row -->
@@ -197,21 +297,21 @@ table tbody tr td{
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>SKU</th>
-                                        <th>start Price</th>
-                                        <th>Quantity</th>
+                                        <th class="sku">SKU</th>
+                                        <th class="start_price">Start Price</th>
+                                        <th class="quantity">Quantity</th>
                                     </tr> 
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>B7-1308</td>
-                                        <td>129.99</td>
-                                        <td>1</td>
+                                        <td class="sku">B7-1308</td>
+                                        <td class="start_price">129.99</td>
+                                        <td class="quantity">1</td>
                                       </tr>
                                       <tr>
-                                        <td>B7-1309</td>
-                                        <td>129.99</td>
-                                        <td>2</td>
+                                        <td class="sku">B7-1309</td>
+                                        <td class="start_price">129.99</td>
+                                        <td class="quantity">2</td>
                                       </tr>
                                 </tbody>
                               </table>
@@ -253,6 +353,22 @@ table tbody tr td{
             }
         })
     }
+
+
+       // table column hide and show toggle checkbox
+       $("input:checkbox").click(function(){
+            let column = "."+$(this).attr("name");
+            $(column).toggle();
+        });
+
+
+        //table column by default hide
+        $("input:checkbox:not(:checked)").each(function() {
+            var column = "table ." + $(this).attr("name");
+            $(column).hide();
+        });
+
+
 
 </script>
 
