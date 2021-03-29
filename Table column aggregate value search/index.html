@@ -10,6 +10,16 @@
 
     td {
     text-align: center;
+    padding: 10px;
+    }
+
+    table thead tr th {
+      border: 1px solid #cccccc;
+      padding: 10px;
+    }
+
+    table tbody tr td {
+      border: 1px solid #cccccc;
     }
 
     .filter>div {
@@ -27,9 +37,13 @@
 </style>
 </head>
 <body>
-
+    <div class="checkbox-count-content" style="display: none;">
+      <div class="checkbox-count"></div>
+    </div>
+    
     <table>
         <thead>
+          <th><input type="checkbox" class="ckbCheckAll" id="ckbCheckAll"></th>
           <th class="filter">
             Available Quantity
             <div>
@@ -72,36 +86,43 @@
         </thead>
         <tbody>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td> 
             <td>4</td>
             <td>10</td>
             <td>12</td>
           </tr>
           <tr>
-            <td>9</td>
+            <td><input type="checkbox" class="checkBoxClass"></td>
+            <td>6</td>
             <td>12</td>
             <td>11</td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td>
             <td>1</td>
             <td>14</td>
             <td>12</td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td>
             <td>0</td>
             <td>8</td>
             <td>10</td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td>
             <td>6</td>
             <td>14</td>
             <td>18</td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td>
             <td>1</td>
             <td>11</td>
             <td>22</td>
           </tr>
           <tr>
+            <td><input type="checkbox" class="checkBoxClass"></td>
             <td>6</td>
             <td>10</td>
             <td>8</td>
@@ -113,34 +134,71 @@
 
       <script>
 
-        const aggrFn = {
-        "=": (a, b) => a == b,
-        "<": (a, b) => a < b,
-        ">": (a, b) => a > b,
-        "<=": (a, b) => a <= b,
-        ">=": (a, b) => a >= b,
-        };
+          $(document).ready(function() {
 
-        function filterColumns($table) {
-        const colFilters = {};
-        $table.find("thead .filter").each(function() {
-            colFilters[$(this).index()] = {
-            agg: $(this).find("select").val(),
-            val: $(this).find("input").val(),
+          $('.ckbCheckAll, .checkBoxClass').click(function() {
+            if ($('.ckbCheckAll:checked').length > 0 || $('.checkBoxClass:checked').length > 0) {
+              $('.checkbox-count-content').show(500);
+            } else {
+              $('.checkbox-count-content').hide(500);
             }
-        });
-        $table.find("tbody tr").each(function() {
-            const $tr = $(this);
-            const shouldHide = Object.entries(colFilters).some(([k, v]) => {
-                return v.val === "" ? false : !aggrFn[v.agg](parseFloat($tr.find(`td:eq(${k})`).text()), parseFloat(v.val));
-            });
-            $tr.toggleClass("u-none", shouldHide);
-        });
-        }
+          })
 
-        $(".filter").on("input", ":input", function(ev) {
-        filterColumns($(this).closest("table"));
-        });
+          const countCheckedAll = function() {
+            const counter = $(".checkBoxClass:checked").length;
+            $(".checkbox-count").html(counter + " variation selected!");
+            console.log(counter + ' variation selected!');
+          };
+
+          $(".checkBoxClass").on("click", countCheckedAll);
+
+          $('.ckbCheckAll').click(function() {
+            if ($(this).is(":checked")) {
+              $('tbody').find('tr:visible .checkBoxClass').prop('checked', true);
+              countCheckedAll();
+            } else {
+              $(".checkBoxClass").prop('checked', false);
+              $('.checkbox-count-content').hide(500);
+            }
+          })
+
+          $(".checkBoxClass").change(function() {
+            if (!$(this).prop("checked")) {
+              $(".ckbCheckAll").prop("checked", false);
+            }
+          });
+
+
+          const aggrFn = {
+            "=": (a, b) => a == b,
+            "<": (a, b) => a < b,
+            ">": (a, b) => a > b,
+            "<=": (a, b) => a <= b,
+            ">=": (a, b) => a >= b,
+          };
+
+          function filterColumns($table) {
+            const colFilters = {};
+            $table.find("thead .filter").each(function() {
+              colFilters[$(this).index()] = {
+                agg: $(this).find("select").val(),
+                val: $(this).find("input").val(),
+              }
+            });
+            $table.find("tbody tr").each(function() {
+              const $tr = $(this);
+              const shouldHide = Object.entries(colFilters).some(([k, v]) => {
+                return v.val === "" ? false : !aggrFn[v.agg](parseFloat($tr.find(`td:eq(${k})`).text()), parseFloat(v.val));
+              });
+              $tr.toggleClass("u-none", shouldHide);
+            });
+          }
+
+          $(".filter").on("input", ":input", function(ev) {
+            filterColumns($(this).closest("table"));
+          });
+
+          });
     
       </script>
 
