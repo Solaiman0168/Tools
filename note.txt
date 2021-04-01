@@ -1,0 +1,52 @@
+https://jsfiddle.net/4kyr5chq/
+https://stackoverflow.com/questions/55244336/navbar-and-thead-fixed-top
+https://codepen.io/giomen/pen/YyoJQa
+
+
+
+
+https://codepen.io/nbalcom/pen/ozwqvb
+https://css-tricks.com/position-sticky-and-table-headers/
+
+
+https://stackoverflow.com/questions/44740907/how-to-store-table-show-hide-columns-in-cookie
+http://plnkr.co/edit/xzFFFBSCAjUw3Mywm0LO?p=preview&preview
+
+
+Loader
+https://codepen.io/aaroniker/pen/MWgRBdV 
+https://freefrontend.com/css-loaders/
+
+
+Modal Iframe
+https://codepen.io/tffabro/pen/aboNoBM
+
+SMS
+https://stackoverflow.com/questions/40421415/laravel-call-to-a-member-function-delete-on-null
+
+Table join
+https://www.youtube.com/watch?v=rO4Y1RiZT7c
+
+
+https://codepen.io/misotolar/pen/RrvZyR
+
+https://codepen.io/graham_saunders/pen/vrDxf dragdrop
+
+https://jsfiddle.net/mrgiao/2xfuwaLq/ content down up
+
+http://jsfiddle.net/hungerpain/eK8X5/7/  
+
+https://www.aspsnippets.com/demos/2666/ check popup checked
+
+https://codepen.io/matuzo/pen/dMdveV css counter
+
+CodePen Home
+Drag and Resize Table Columns 
+
+Resizable Table Columns
+
+https://api.jquery.com/checked-selector/ checked count
+
+
+https://codepen.io/KorniloFF/pen/OdNpWB
+https://codepen.io/KorniloFF/embed/OdNpWB?default-tab=html&theme-id=light
